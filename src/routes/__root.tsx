@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import appCss from "../styles.css?url";
 import { Navbar } from "@/components/site/Navbar";
@@ -107,6 +108,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <body className="bg-background text-foreground antialiased">
         {children}
         <Scripts />
+        <SpeedInsights />
       </body>
     </html>
   );
