@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { Analytics } from "@vercel/analytics/react";
 
 import appCss from "../styles.css?url";
 import { Navbar } from "@/components/site/Navbar";
@@ -106,6 +107,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body className="bg-background text-foreground antialiased">
         {children}
+        <Analytics />
         <Scripts />
       </body>
     </html>
